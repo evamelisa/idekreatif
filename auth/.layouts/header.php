@@ -6,8 +6,18 @@
     unset($_SESSION['notification']);
   }
 
+  if (isset($_SESSION["username"]) || isset($_SESSION["role"])) {
+    $_SESSION['notiication'] = [
+      'type' => 'danger',
+      'message' => 'Silakan Logout Terlebih Dahulu!'
+      ];
+      header('Location: ../dashboard.php');
+  }
+
   ?>
-  
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
