@@ -14,6 +14,13 @@
       header('Location: ../dashboard.php');
   }
 
+      if (isset($_SESSION["username"]) || isset($_SESSION["role"])) {
+    $_SESSION['notiication'] = [
+      'type' => 'danger',
+      'message' => 'Silakan Logout Terlebih Dahulu!'
+      ];
+      header('Location: ../dashboard.php');
+  }
   ?>
 
 <!DOCTYPE html>
