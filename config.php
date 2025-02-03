@@ -4,7 +4,7 @@
 $host =  "localhost";
 $username = "root";
 $password = "";
-$database = "idekreatif";
+$database = "ide_kreatif";
 
 
 $conn = mysqli_connect($host, $username, $password, $database);

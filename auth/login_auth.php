@@ -6,10 +6,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $sql = "SELECT * FORM users WHERE username='$username'";
+    $sql = "SELECT * FROM users WHERE username='$username'";
     $result = $conn->query($sql);
 
-    if ($result->num_row > 0) {
+    if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         
         if (password_verify($password, $row["password"])) {
@@ -20,10 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $_SESSION['notification'] = [
                 'type' => 'primary',
-                'nessage' => 'Selamat Datang Kembali!'
+                'message' => 'Selamat Datang Kembali!'
             ];
 
-            header(Location: '../dashboard.php');
+            header('Location: ../dashboard.php');
             exit();
         } else {
             $_SESSION['notification'] = [

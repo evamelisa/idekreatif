@@ -1,7 +1,7 @@
 <?php
 require_once("../config.php");
 
-sessiom_start();
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'message' => 'Gagal Registrasi: ' . mysqli_error($conn)
         ];
     }
-    header(Location: login.php);
+    header('Location: login.php');
     exit();
 }
 
