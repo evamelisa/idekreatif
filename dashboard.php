@@ -10,7 +10,7 @@ include '.includes/toast_notification.php';
         <!--table dengan baris yang dapat di hover --> 
         <div class="card">
             <!--header table --> 
-            <div class="card-header d-flex justify-content-between-align-item-center">
+            <div class="card-header d-flex justify-content-between-align-items-center">
                 <h4>Semua Postingan</h4>
             </div>
             <div class="card-body">
@@ -32,7 +32,7 @@ include '.includes/toast_notification.php';
   $index = 1; //variabel untuk nomor urut
   /*query untuk nomor urut 
   post, users, dan categories */
-  $query = "SELECT posts.*, users.name as user_name,
+  $query = "SELECT posts.*, users.name as username,
   categories.category_name FROM posts
   INNER JOIN users ON posts.user_id = users.user_id
   LEFT JOIN categories ON posts.category_id = categories.category_id
@@ -44,9 +44,9 @@ include '.includes/toast_notification.php';
   while ($post = mysqli_fetch_assoc($exec)) :
   ?>
   <tr>
-    <td><?= $index++ ?></td>
+    <td><?= $index++; ?></td>
     <td><?= $post['post_title']; ?></td>
-    <td><?= $post['user_name']; ?></td>
+    <td><?= $post['username']; ?></td>
     <td><?= $post['category_name']; ?></td>
     <td>
         <div class="dropdown">
