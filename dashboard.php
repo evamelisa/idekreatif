@@ -38,7 +38,7 @@ include '.includes/toast_notification.php';
   LEFT JOIN categories ON posts.category_id = categories.category_id
   WHERE posts.user_id = $userId";
   //eksekusi query
-  $exec =mysqli_query($conn, $query);
+  $exec = mysqli_query($conn, $query);
 
   //perulangan untuk menampilkan seiap baris hasi query
   while ($post = mysqli_fetch_assoc($exec)) :
