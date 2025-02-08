@@ -32,7 +32,7 @@ include '.includes/toast_notification.php';
   $index = 1; //variabel untuk nomor urut
   /*query untuk nomor urut 
   post, users, dan categories */
-  $query = "SELECT posts.*. users.name as user_name,
+  $query = "SELECT posts.*, users.name as user_name,
   categories.category_name FROM posts
   INNER JOIN users ON posts.user_id = users.user_id
   LEFT JOIN categories ON posts.category_id = categories.category_id
