@@ -54,5 +54,5 @@ include '.includes/header.php';
 </div>
 <?php
 //menyertakan footer halaman
-include '.include/footer.php';
+include '.includes/footer.php';
 ?>
