@@ -1,6 +1,6 @@
 <?php
 //memasukan file konfigurasi database
-include 'config,php';
+include 'config.php';
 
 //memasukan header halaman
 include '.includes/header.php';
