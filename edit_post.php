@@ -10,7 +10,7 @@ include '.includes/header.php';
 $postIdToEdit = $_GET['post_id'];
 
 //query untuk mengambil data postingan 
-$query = "SELECT FROM posts WHERE id_post = $postIdToEdit";
+$query = "SELECT * FROM posts WHERE id_post = $postIdToEdit";
 $result = $conn->query($query);
 
 //memeriksa apakah data postingan di temukan 
