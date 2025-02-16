@@ -16,7 +16,7 @@ if (isset($_POST['simpan'])) {
     $categoryId = $_POST["category_id"];
 
     //mengatur direktori
-    $imageDir = "assests/img/uploads/";
+    $imageDir = "assets/img/uploads/";
     $imageName = $_FILES["image"]["name"];
     $imagePath = $imageDir . basename($imageName);
 

@@ -21,10 +21,6 @@ include '.includes/header.php';
                         <input class="form-control" type="file" name="image" accept="image/*" />
                      </div>
                      <div class="mb-3">
-                        <label for="category_id" class="form-label">Unggah Gambar</label>
-                        <input class="form-control" type="file" name="image" accept="image/*" />
-                     </div>
-                     <div class="mb-3">
                         <label for="category_id" class="form-label">Kategori</label>
                         <select class="form-select" name="category_id" required>
                             <!-- mengambil data kategori dari database -->

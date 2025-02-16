@@ -113,7 +113,7 @@ while ($category = mysqli_fetch_assoc($exec)) :
 </div>
 
 
-<?php endwhile; ?>
+<?php endwhile; ?> 
 
 
 </tbody>
